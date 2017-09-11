@@ -1,0 +1,26 @@
+title: Jonathan ARNAULT
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+twitter_profile: https://twitter.com/jonathanarnault
+github_profile: https://github.com/jonathanarnault
+medium_profile: https://medium.com/@jonathan.arnault
+linkedin_profile: https://www.linkedin.com/in/jonathanarnault/
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
