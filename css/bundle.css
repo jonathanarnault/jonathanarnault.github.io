@@ -14,7 +14,7 @@ body {
   font-size: 14px;
   background-image: url('/images/background.jpg');
   background-position: contain;
-  bqckground-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 a {
