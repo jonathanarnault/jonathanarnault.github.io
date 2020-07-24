@@ -46,6 +46,7 @@ a:hover {
 #boxing img {
   width: 128px;
   height: 128px;
+  border-radius: 64px;
 }
 
 #boxing h1 {
@@ -67,4 +68,5 @@ a:hover {
 #boxing .icons img {
   height: 64px;
   width: 64px;
+  border-radius: 0;
 }
