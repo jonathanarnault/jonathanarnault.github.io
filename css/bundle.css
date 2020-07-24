@@ -13,7 +13,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   background-image: url('/images/background.jpg');
-  background-position: contain;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
