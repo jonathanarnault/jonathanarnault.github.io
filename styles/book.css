@@ -1,0 +1,338 @@
+/**
+ * Copyright 2021 Jonathan ARNAULT
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+:root {
+    --header-background: #1c7a83;
+    --header-hover-background: #053b57;
+
+    --title-color: #1c7a83;
+
+
+    --background-color: #f0f0f0;
+    --invert-background-color: #222222;
+
+    --text-color: var(--invert-background-color);
+    --invert-text-color: var(--background-color);
+
+    --card-background: #f9f9f9;
+    --card-color: var(--text-color);
+}
+
+/********************
+ * LAYOUT
+ *******************/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 720px;
+        margin: auto;
+    }
+}
+
+@media(min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        width: 1160px;
+    }
+}
+
+.h-xs-hidden {
+    display: none;
+}
+
+    @media(min-height: 640px) {
+        .h-xs-hidden {
+            display: inherit;
+        }
+    }
+
+/********************
+ * TEXT
+ *******************/
+
+p {
+    margin: 0.5em 0;
+    text-align: justify;
+}
+
+    p.large {
+        font-family: 'Oxanium';
+        font-weight: 600;
+    }
+
+    p.large strong {
+        font-weight: 600;
+    }
+
+strong {
+    font-weight: 700;
+}
+
+/********************
+ * HEADER
+ *******************/
+
+header {
+    display: flex;
+    height: 64px;
+    background-color: var(--header-background);
+    color: var(--invert-text-color);
+    position: fixed;
+        top: 0;
+        left: 0;
+        right: 0; 
+        z-index: 9000;
+}
+
+    header .container {
+        justify-content: space-between;
+    }
+
+    header .brand,
+    header label {
+        display: flex;
+        height: 64px;
+        padding: 1em;
+
+        align-items: center;
+    }
+
+    header .brand {
+        font-family: 'Oxanium';
+        font-weight: 600;
+    }
+
+    header label {
+        cursor: pointer;
+        width: 64px;
+        background-image: url(/images/menu.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+    }
+
+    header input[type="checkbox"] {
+        display: none;
+    }
+
+    header input[type="checkbox"]:checked ~ nav {
+        max-height: 320px;
+    }
+
+    header nav {
+        display: flex;
+        max-height: 0;
+        overflow: hidden;
+        flex-basis: 100%;
+        flex-direction: column;
+
+        transition: max-height 300ms;
+        position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+    }
+
+        header nav a {
+            display: flex;
+            height: 48px;
+            background-color: var(--header-background);
+            color: var(--header-color);
+            text-decoration: none;
+            align-items: center;
+            padding: 0 1em;
+            border-top: 1px var(--header-hover-background) solid;
+        }
+
+            header nav a:hover {
+                background-color: var(--header-hover-background);
+                text-decoration: none;
+            }
+
+
+@media(min-width: 992px) {
+    header input[type="checkbox"],
+    header label {
+        display: none;
+    }
+
+    header nav {
+        position: relative;
+        top: 0;
+        max-height: 64px;
+        flex-direction: row;
+        flex-basis: auto;
+    }
+
+        header nav a {
+            height: 64px;
+        }
+}
+
+footer {
+    padding: 0.5em;
+}
+
+/********************
+ * SECTIONS
+ *******************/
+
+section {
+    padding: calc(4.5em) 0.5em 0.5em 0.5em;
+}
+
+    section h1 {
+        display: flex;
+        height: 64px;
+        font-family: 'Oxanium', sans-serif;
+        color: var(--title-color);
+        font-size: 2em;
+        margin: 0;
+        align-items: center;
+    }
+
+.card {
+    background-color: var(--card-background);
+    color: var(--card-color);
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+    .card .card-title {
+        font-family: 'Oxanium', sans-serif;
+        color: var(--title-color);
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0.5rem;
+        border-bottom: 1px var(--title-color) solid;
+    }
+
+    .card .card-content {
+        padding: 0.5rem;
+    }
+
+#about {
+    background-color: var(--invert-background-color);
+    color: var(--invert-text-color);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding-bottom: calc(4.5em);
+}
+
+.about-myself {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .about-myself .about-pane {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .about-myself .about-pane .about-photo {
+            height: 128px;
+            width: 128px;
+            background-image: url(/images/me.jpg);
+            background-size: cover;
+            border-radius: 50%;
+            border: 1px var(--invert-text-color) solid;
+            margin-bottom: 1em;
+        }
+
+@media(min-width: 768px) {
+    .about-myself .about-pane .about-photo {
+        height: 192px;
+        width: 192px;
+    }
+}
+
+@media(min-width: 992px) {
+    .about-myself {
+        flex-direction: row;
+        
+    }
+
+        .about-myself .about-pane {
+            width: 50%;
+        }
+
+            .about-myself .about-pane .about-photo {
+                height: 256px;
+                width: 256px;
+            }
+}
+
+.charts {
+    display: flex;
+    position: relative;
+    top: -196px;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .charts .chart {
+        width: 100%;
+    }
+
+        .charts .chart .card-content canvas {
+                width: 256px;
+                height: 256px;
+            }
+
+@media(min-width: 992px) {
+    .charts {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+        .charts .chart {
+            width: 48%;
+        }
+}
