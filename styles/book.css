@@ -1,5 +1,5 @@
 /**
- * Copyright 2021 Jonathan ARNAULT
+ * Copyright 2021-2022 Jonathan ARNAULT
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
  * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -32,7 +32,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -82,11 +83,11 @@ body {
     display: none;
 }
 
-    @media(min-height: 640px) {
-        .h-xs-hidden {
-            display: inherit;
-        }
+@media(min-height: 640px) {
+    .h-xs-hidden {
+        display: inherit;
     }
+}
 
 /********************
  * TEXT
@@ -97,14 +98,14 @@ p {
     text-align: justify;
 }
 
-    p.large {
-        font-family: 'Oxanium';
-        font-weight: 600;
-    }
+p.large {
+    font-family: 'Oxanium';
+    font-weight: 600;
+}
 
-    p.large strong {
-        font-weight: 600;
-    }
+p.large strong {
+    font-weight: 600;
+}
 
 strong {
     font-weight: 700;
@@ -120,79 +121,80 @@ header {
     background-color: var(--header-background);
     color: var(--invert-text-color);
     position: fixed;
-        top: 0;
-        left: 0;
-        right: 0; 
-        z-index: 9000;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
 }
 
-    header .container {
-        justify-content: space-between;
-    }
+header .container {
+    justify-content: space-between;
+}
 
-    header .brand,
-    header label {
-        display: flex;
-        height: 64px;
-        padding: 1em;
+header .brand,
+header label {
+    display: flex;
+    height: 64px;
+    padding: 1em;
 
-        align-items: center;
-    }
+    align-items: center;
+}
 
-    header .brand {
-        font-family: 'Oxanium';
-        font-weight: 600;
-    }
+header .brand {
+    font-family: 'Oxanium';
+    font-weight: 600;
+}
 
-    header label {
-        cursor: pointer;
-        width: 64px;
-        background-image: url(/images/menu.svg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 50%;
-    }
+header label {
+    cursor: pointer;
+    width: 64px;
+    background-image: url(/images/menu.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
 
-    header input[type="checkbox"] {
-        display: none;
-    }
+header input[type="checkbox"] {
+    display: none;
+}
 
-    header input[type="checkbox"]:checked ~ nav {
-        max-height: 320px;
-    }
+header input[type="checkbox"]:checked~nav {
+    max-height: 320px;
+}
 
-    header nav {
-        display: flex;
-        max-height: 0;
-        overflow: hidden;
-        flex-basis: 100%;
-        flex-direction: column;
+header nav {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    flex-basis: 100%;
+    flex-direction: column;
 
-        transition: max-height 300ms;
-        position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-    }
+    transition: max-height 300ms;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+}
 
-        header nav a {
-            display: flex;
-            height: 48px;
-            background-color: var(--header-background);
-            color: var(--header-color);
-            text-decoration: none;
-            align-items: center;
-            padding: 0 1em;
-            border-top: 1px var(--header-hover-background) solid;
-        }
+header nav a {
+    display: flex;
+    height: 48px;
+    background-color: var(--header-background);
+    color: var(--header-color);
+    text-decoration: none;
+    align-items: center;
+    padding: 0 1em;
+    border-top: 1px var(--header-hover-background) solid;
+}
 
-            header nav a:hover {
-                background-color: var(--header-hover-background);
-                text-decoration: none;
-            }
+header nav a:hover {
+    background-color: var(--header-hover-background);
+    text-decoration: none;
+}
 
 
 @media(min-width: 992px) {
+
     header input[type="checkbox"],
     header label {
         display: none;
@@ -206,9 +208,9 @@ header {
         flex-basis: auto;
     }
 
-        header nav a {
-            height: 64px;
-        }
+    header nav a {
+        height: 64px;
+    }
 }
 
 footer {
@@ -223,15 +225,15 @@ section {
     padding: calc(4.5em) 0.5em 0.5em 0.5em;
 }
 
-    section h1 {
-        display: flex;
-        height: 64px;
-        font-family: 'Oxanium', sans-serif;
-        color: var(--title-color);
-        font-size: 2em;
-        margin: 0;
-        align-items: center;
-    }
+section h1 {
+    display: flex;
+    height: 64px;
+    font-family: 'Oxanium', sans-serif;
+    color: var(--title-color);
+    font-size: 2em;
+    margin: 0;
+    align-items: center;
+}
 
 .card {
     background-color: var(--card-background);
@@ -241,18 +243,18 @@ section {
     border-radius: 0.5em;
 }
 
-    .card .card-title {
-        font-family: 'Oxanium', sans-serif;
-        color: var(--title-color);
-        font-size: 1.5em;
-        margin: 0;
-        padding: 0.5rem;
-        border-bottom: 1px var(--title-color) solid;
-    }
+.card .card-title {
+    font-family: 'Oxanium', sans-serif;
+    color: var(--title-color);
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px var(--title-color) solid;
+}
 
-    .card .card-content {
-        padding: 0.5rem;
-    }
+.card .card-content {
+    padding: 0.5rem;
+}
 
 #about {
     background-color: var(--invert-background-color);
@@ -270,21 +272,21 @@ section {
     flex-direction: column;
 }
 
-    .about-myself .about-pane {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.about-myself .about-pane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .about-myself .about-pane .about-photo {
-            height: 128px;
-            width: 128px;
-            background-image: url(/images/me.jpg);
-            background-size: cover;
-            border-radius: 50%;
-            border: 1px var(--invert-text-color) solid;
-            margin-bottom: 1em;
-        }
+.about-myself .about-pane .about-photo {
+    height: 128px;
+    width: 128px;
+    background-image: url(/images/me.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 1px var(--invert-text-color) solid;
+    margin-bottom: 1em;
+}
 
 @media(min-width: 768px) {
     .about-myself .about-pane .about-photo {
@@ -296,43 +298,15 @@ section {
 @media(min-width: 992px) {
     .about-myself {
         flex-direction: row;
-        
+
     }
 
-        .about-myself .about-pane {
-            width: 50%;
-        }
-
-            .about-myself .about-pane .about-photo {
-                height: 256px;
-                width: 256px;
-            }
-}
-
-.charts {
-    display: flex;
-    position: relative;
-    top: -196px;
-    flex-direction: column;
-    width: 100%;
-}
-
-    .charts .chart {
-        width: 100%;
+    .about-myself .about-pane {
+        width: 50%;
     }
 
-        .charts .chart .card-content canvas {
-                width: 256px;
-                height: 256px;
-            }
-
-@media(min-width: 992px) {
-    .charts {
-        flex-direction: row;
-        justify-content: space-between;
+    .about-myself .about-pane .about-photo {
+        height: 256px;
+        width: 256px;
     }
-
-        .charts .chart {
-            width: 48%;
-        }
 }

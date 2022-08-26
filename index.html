@@ -1,101 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Jonathan ARNAULT - Software Engineer</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <title>Jonathan ARNAULT - Software Engineer</title>
 
-        <meta name="description" content="I am Jonathan ARNAULT, a Senior Software Engineer with 6 years of professional
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="I am Jonathan ARNAULT, a Senior Software Engineer with 6 years of professional
         experience designing and building software.">
 
-        <link rel="stylesheet" href="/styles/fonts.css">
-        <link rel="stylesheet" href="/styles/book.css">
-    </head>
-    <body>
-        <header>
-            <div class=container>
-                <div class="brand">J&nbsp;·&nbsp;ARNAULT</div>
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="stylesheet" href="/styles/book.css">
 
-                <input type="checkbox" id="header-toggle">
-                <label for="header-toggle"><i></i></label>
-                <nav>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="/resume.pdf" target="_blank">Résumé</a>
-                    <a href="https://github.com/jonathanarnault" rel="noopener noreferrer" target="_blank">GitHub</a>
-                    <a href="https://dev.to/jonathanarnault" rel="noopener noreferrer" target="_blank">Dev.to</a>
-                </nav>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class=container>
+            <div class="brand">J&nbsp;·&nbsp;ARNAULT</div>
+
+            <input type="checkbox" id="header-toggle">
+            <label for="header-toggle"><i></i></label>
+            <nav>
+                <a href="/arnault-resume.pdf" target="_blank">Résumé</a>
+                <a href="https://github.com/jonathanarnault" rel="noopener noreferrer" target="_blank">GitHub</a>
+                <a href="https://dev.to/jonathanarnault" rel="noopener noreferrer" target="_blank">Dev.to</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <div class="about-myself">
+                    <div class="about-pane h-xs-hidden">
+                        <div class="about-photo h-xs-hidden">
+                            <div class=""></div>
+                        </div>
+                    </div>
+
+                    <div class="about-pane">
+                        <div class="about-description">
+                            <p class="large">
+                                Hi ! I am Jonathan ARNAULT, a <strong>Senior Software Engineer</strong> with 7 years
+                                of professional experience designing and building software.
+                            </p>
+
+                            <p>
+                                Since my childwood I have been good at maths and science and started learning web
+                                development in 2008 when I was in high school, beginning with HTML, CSS, PHP and
+                                JavaScript.
+                            </p>
+
+                            <p>
+                                I completed a two year-degree in web development and design in 2012 and
+                                a <strong>M.Sc. in Computer Science from TELECOM Nancy</strong> in 2015, with a major in
+                                Engineering and Applications of Big Data.
+                            </p>
+                            <p>
+                                I am specialized in <strong>back-end development</strong> with a focus on
+                                <strong>distributed systems</strong>. Furthermore, I am fluent in
+                                <strong>French</strong> and <strong>English</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </section>
+    </main>
+</body>
 
-        <main>
-            <section id="about">
-                <div class="container">
-                    <div class="about-myself">
-                        <div class="about-pane h-xs-hidden">
-                            <div class="about-photo h-xs-hidden">
-                                <div class=""></div>
-                            </div>
-                        </div>
-
-                        <div class="about-pane">
-                            <div class="about-description">
-                                <p class="large">
-                                    Hi ! I am Jonathan ARNAULT, a <strong>Senior Software Engineer</strong> with 6 years
-                                    of professional experience designing and building software.
-                                </p>
-
-                                <p>
-                                    Since my childwood I have been good at maths and science and started learning web
-                                    development in 2008 when I was in high school, beginning with HTML, CSS, PHP and 
-                                    JavaScript.
-                                </p>
-                                
-                                <p>
-                                    I completed a <strong>M.Sc. in Computer Science from TELECOM Nancy</strong> in 2015,
-                                    with a major in Engineering and Applications of Big Data. Furthermore, I am fluent
-                                    in <strong>French</strong> and <strong>English</strong> and learned UI &amp; UX
-                                    design during my spare time.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills">
-                <div class="container">
-                    <h1>Skills</h1>
-
-                    <div class="charts">
-                        <div class="card chart" id="chart-skills">
-                            <h2 class="card-title">
-                                Programming
-                            </h2>
-                            <div class="card-content">
-                                <canvas></canvas>
-                            </div>
-                        </div>
-
-                        <div class="card chart" id="chart-interests">
-                            <h2 class="card-title">
-                                Interests
-                            </h2>
-                            <div class="card-content">
-                                <canvas></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            &copy; 2021 Jonathan ARNAULT
-        </footer>
-
-        <script src="/scripts/chart.js"></script>
-        <script src="/scripts/book.js"></script>
-    </body>
 </html>
